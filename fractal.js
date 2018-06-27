@@ -14,6 +14,7 @@ fractal.docs.set('path', __dirname + '/src/docs');
 
 fractal.components.set('default.preview', '@preview');
 
-fractal.web.set('static.path', __dirname + '../../assets');
+fractal.web.set('static.path', __dirname + '/assets');
+
 
 

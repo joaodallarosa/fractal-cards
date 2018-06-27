@@ -10,12 +10,12 @@ const concat = require('gulp-concat');
 gulp.task('styles', function() {
     gulp.src('src/**/*.scss')
     .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
-    .pipe(concat('main.css')) // this is what was missing
+    .pipe(concat('components.css')) // this is what was missing
     // .pipe(autoprefixer({
     //   browsers: 'last 2 versions',
     //   cascade: false
     // }))
-    .pipe(gulp.dest('./src/assets'))
+    .pipe(gulp.dest('./assets/css/'))
   });
   
   // Watch task
@@ -37,6 +37,7 @@ fractal.set('project.title', 'FooCorp Component Library'); // title for the proj
 fractal.web.set('builder.dest', 'build'); // destination for the static export
 fractal.docs.set('path', `src/docs`); // location of the documentation directory.
 fractal.components.set('path', `src/components`); // location of the component directory.
+fractal.web.set('static.path', __dirname + '/assets');
 
 // any other configuration or customisation here
 
