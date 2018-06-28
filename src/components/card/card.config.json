@@ -1,6 +1,9 @@
 {
     "status": "wip",
     "context": {
-        "text": "Card Text :)"
+        "text": "Card Text :)",
+        "elevation": 4,
+        "corner-roundness": 2,
+        "content": "This is the Card Content"
     }
 }
