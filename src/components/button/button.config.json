@@ -1,0 +1,29 @@
+{
+    "title": "button",
+    "status": "wip",
+    "context": {
+        "button": {
+            "modifier": "default",
+            "label": "Button"
+        }
+    },
+    "variants": [{
+            "name": "outline",
+            "context": {
+                "button": {
+                    "modifier": "outline",
+                    "label": "Outline"
+                }
+            }
+        },
+        {
+            "name": "disabled",
+            "context": {
+                "button": {
+                    "modifier": "disabled",
+                    "label": "Disabled"
+                }
+            }
+        }
+    ]
+}

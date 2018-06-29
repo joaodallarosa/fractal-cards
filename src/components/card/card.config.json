@@ -1,9 +1,29 @@
 {
     "status": "wip",
     "context": {
-        "text": "Card Text :)",
-        "elevation": 4,
-        "corner-roundness": 2,
-        "content": "This is the Card Content"
-    }
+        "button": {
+            "label": "Explore More",
+            "modifier": "outline"
+        }
+    },
+    "variants": [{
+            "name": "default",
+            "context": {
+                "text": "Card Text :)",
+                "elevation": 4,
+                "corner-roundness": 2,
+                "content": "This is the Card Content"
+            }
+        },
+        {
+            "name": "city",
+            "context": {
+                "text": "This is a city card",
+                "elevation": 1,
+                "corner-roundness": 2,
+                "content": "This is the Card Content"
+
+            }
+        }
+    ]
 }
