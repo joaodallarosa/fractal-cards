@@ -9,19 +9,15 @@ const concat = require('gulp-concat');
 // Styles task
 gulp.task('styles', function() {
     gulp.src('src/**/*.scss')
-    .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
-    .pipe(concat('components.css')) // this is what was missing
-    // .pipe(autoprefixer({
-    //   browsers: 'last 2 versions',
-    //   cascade: false
-    // }))
-    .pipe(gulp.dest('./assets/css/'))
-  });
-  
-  // Watch task
-  gulp.task('watch', ['styles'], function() {
-    gulp.watch('src/**/*.scss',['styles']);
-  });
+        .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
+        .pipe(concat('components.css'))
+        .pipe(gulp.dest('./assets/css/'))
+});
+
+// Watch task
+gulp.task('watch', ['styles'], function() {
+    gulp.watch('src/**/*.scss', ['styles']);
+});
 
 /*
  * Configure a Fractal instance.
@@ -53,7 +49,7 @@ const logger = fractal.cli.console; // keep a reference to the fractal CLI conso
  * This task will also log any errors to the console.
  */
 
-gulp.task('serve', ['watch'], function(){
+gulp.task('build', ['watch'], function() {
     const server = fractal.web.server({
         sync: true
     });
@@ -73,7 +69,7 @@ gulp.task('serve', ['watch'], function(){
  * configuration option set above.
  */
 
-gulp.task('build', function(){
+gulp.task('build-static', function() {
     const builder = fractal.web.builder();
     builder.on('progress', (completed, total) => logger.update(`Exported ${completed} of ${total} items`, 'info'));
     builder.on('error', err => logger.error(err.message));

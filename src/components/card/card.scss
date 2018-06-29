@@ -29,6 +29,12 @@ $h-color: white;
     }
 }
 
+.card--small {}
+
+.card--medium {}
+
+.card--big {}
+
 .elevation0 {
     box-shadow: none;
 }
@@ -57,12 +63,10 @@ $h-color: white;
     .card {
         margin: 0px;
     }
-
     @media (max-width:629px) {
         display: block;
     }
 }
-
 
 @media (min-width:629px) {
     .big {
@@ -70,21 +74,19 @@ $h-color: white;
         flex-shrink: 0;
         flex-basis: 100%;
     }
-    
     .medium {
         flex-grow: 0;
         flex-shrink: 0;
         flex-basis: 50%;
     }
-    
     .small {
         flex-grow: 0;
         flex-shrink: 0;
         flex-basis: 25%;
         max-width: 25%;
     }
-    
 }
+
 .corner-roundness {
     border-radius: 8px;
 }
@@ -133,7 +135,7 @@ $h-color: white;
         .countrycity-container {
             top: 20%;
             @media (max-width: 629px) {
-                top:35%;
+                top: 35%;
             }
         }
         p {
@@ -141,7 +143,7 @@ $h-color: white;
             opacity: 1;
             top: 30%;
             @media (max-width: 629px) {
-                top:35%;
+                top: 35%;
             }
         }
         button {
