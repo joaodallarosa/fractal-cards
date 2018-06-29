@@ -1,0 +1,7 @@
+<div id="grid-container">
+    {{#each cards}}
+    <div class="{{this.size}}">
+        {{> @card--highlight card=this}}
+    </div>
+    {{/each}}
+</div>

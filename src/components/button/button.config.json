@@ -4,7 +4,8 @@
     "context": {
         "button": {
             "modifier": "default",
-            "label": "Button"
+            "label": "Button",
+            "onClick": "console.log('Default Button clicked :)')"
         }
     },
     "variants": [{
@@ -12,7 +13,8 @@
             "context": {
                 "button": {
                     "modifier": "outline",
-                    "label": "Outline"
+                    "label": "Outline",
+                    "onClick": "console.log('Outline Button clicked :)')"
                 }
             }
         },
@@ -21,7 +23,8 @@
             "context": {
                 "button": {
                     "modifier": "disabled",
-                    "label": "Disabled"
+                    "label": "Disabled",
+                    "onClick": "console.log('Disabled Button clicked :)')"
                 }
             }
         }

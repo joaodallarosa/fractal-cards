@@ -14,45 +14,98 @@ $h-color: white;
     &:hover {
         box-shadow: 3px 3px 20px rgba(0, 0, 0, .5);
     }
+    @media (max-width:629px) {
+        width: auto !important;
+        height: 280px !important;
+    }
+    &.height-big {
+        height: 520px;
+    }
+    &.height-medium {
+        height: 360px;
+    }
+    &.height-small {
+        height: 360px;
+    }
 }
 
-.elevation-0 {
+.elevation0 {
     box-shadow: none;
 }
 
-.elevation-1 {
+.elevation1 {
     box-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
 }
 
-.elevation-2 {
+.elevation2 {
     box-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
 }
 
-.elevation-3 {
+.elevation3 {
     box-shadow: 3px 3px 3px rgba(0, 0, 0, .5);
 }
 
-.elevation-4 {
+.elevation4 {
     box-shadow: 4px 4px 4px rgba(0, 0, 0, .5);
 }
 
-.corner-roundness-0 {
+#grid-container {
+    display: flex;
+    flex-flow: row wrap;
+    font-weight: bold;
+    text-align: center;
+    .card {
+        margin: 0px;
+    }
+
+    @media (max-width:629px) {
+        display: block;
+    }
+}
+
+
+@media (min-width:629px) {
+    .big {
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 100%;
+    }
+    
+    .medium {
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 50%;
+    }
+    
+    .small {
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 25%;
+        max-width: 25%;
+    }
+    
+}
+.corner-roundness {
+    border-radius: 8px;
+}
+
+.corner-roundness0 {
     border-radius: 0px;
 }
 
-.corner-roundness-1 {
+.corner-roundness1 {
     border-radius: 5px;
 }
 
-.corner-roundness-2 {
+.corner-roundness2 {
     border-radius: 10px;
 }
 
-.corner-roundness-3 {
+.corner-roundness3 {
     border-radius: 15px;
 }
 
-.corner-roundness-4 {
+.corner-roundness4 {
     border-radius: 20px;
 }
 
@@ -79,7 +132,7 @@ $h-color: white;
         background-color: rgba(85, 85, 85, 0.8);
         .countrycity-container {
             top: 20%;
-            @media (max-width:629px) {
+            @media (max-width: 629px) {
                 top:35%;
             }
         }
@@ -87,7 +140,7 @@ $h-color: white;
             transition-delay: 0.2s;
             opacity: 1;
             top: 30%;
-            @media (max-width:629px) {
+            @media (max-width: 629px) {
                 top:35%;
             }
         }

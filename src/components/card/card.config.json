@@ -1,11 +1,6 @@
 {
     "status": "wip",
-    "context": {
-        "button": {
-            "label": "Explore More",
-            "modifier": "outline"
-        }
-    },
+    "context": {},
     "variants": [{
             "name": "default",
             "context": {
@@ -16,12 +11,102 @@
             }
         },
         {
-            "name": "city",
+            "name": "highlight",
             "context": {
-                "text": "This is a city card",
-                "elevation": 1,
-                "corner-roundness": 2,
-                "content": "This is the Card Content"
+                "card": {
+                    "mainTitle": "Amsterdam",
+                    "secondaryTitle": "Netherlands",
+                    "info": "fnsldf jkldalkjd dsajkljdl aj j jdksaj s klj djalsj dlkaj ljasl jdlkasj ldsjlj ldsja ldjsal",
+                    "imageUrl": "/imgs/Amsterdam.jpg"
+                },
+                "button": {
+                    "label": "Explore More",
+                    "modifier": "outline",
+                    "onClick": "console.log('testeeee')"
+                }
+            }
+        },
+        {
+            "name": "highlight-grid",
+            "context": {
+                "cards": [{
+                    "mainTitle": "Valtech_",
+                    "secondaryTitle": "Front-End",
+                    "info": "fnsldf jkldalkjd dsajkljdl aj j jdksaj s klj djalsj dlkaj ljasl jdlkasj ldsjlj ldsja ldjsal",
+                    "imageUrl": "/imgs/Lagoa.jpg",
+                    "size": "big",
+                    "button": {
+                        "label": "Explore More",
+                        "modifier": "outline",
+                        "onClick": "console.log('Explore Floripa :)')"
+                    }
+                }, {
+                    "mainTitle": "Venice",
+                    "secondaryTitle": "Italy",
+                    "info": "fnsldf jkldalkjd dsajkljdl aj j jdksaj s klj djalsj dlkaj ljasl jdlkasj ldsjlj ldsja ldjsal",
+                    "imageUrl": "/imgs/Venice.jpg",
+                    "size": "medium",
+                    "button": {
+                        "label": "Explore More",
+                        "modifier": "outline",
+                        "onClick": "console.log('Explore Venice')"
+                    }
+                }, {
+                    "mainTitle": "Berlin",
+                    "secondaryTitle": "Germany",
+                    "info": "fnsldf jkldalkjd dsajkljdl aj j jdksaj s klj djalsj dlkaj ljasl jdlkasj ldsjlj ldsja ldjsal",
+                    "imageUrl": "/imgs/Berlin.jpg",
+                    "size": "small",
+                    "button": {
+                        "label": "Explore More",
+                        "modifier": "outline",
+                        "onClick": "console.log('Explore Berlin')"
+                    }
+                }, {
+                    "mainTitle": "Barcelona",
+                    "secondaryTitle": "Spain",
+                    "info": "fnsldf jkldalkjd dsajkljdl aj j jdksaj s klj djalsj dlkaj ljasl jdlkasj ldsjlj ldsja ldjsal",
+                    "imageUrl": "/imgs/Barcelona.jpg",
+                    "size": "small",
+                    "button": {
+                        "label": "Explore More",
+                        "modifier": "outline",
+                        "onClick": "console.log('Explore Barcelona')"
+                    }
+                }, {
+                    "mainTitle": "Paris",
+                    "secondaryTitle": "France",
+                    "info": "fnsldf jkldalkjd dsajkljdl aj j jdksaj s klj djalsj dlkaj ljasl jdlkasj ldsjlj ldsja ldjsal",
+                    "imageUrl": "/imgs/Paris.jpg",
+                    "size": "small",
+                    "button": {
+                        "label": "Explore More",
+                        "modifier": "outline",
+                        "onClick": "console.log('Explore Paris')"
+                    }
+                }, {
+                    "mainTitle": "Amsterdam",
+                    "secondaryTitle": "Netherlands",
+                    "info": "fnsldf jkldalkjd dsajkljdl aj j jdksaj s klj djalsj dlkaj ljasl jdlkasj ldsjlj ldsja ldjsal",
+                    "imageUrl": "/imgs/Amsterdam.jpg",
+                    "size": "small",
+                    "button": {
+                        "label": "Explore More",
+                        "modifier": "outline",
+                        "onClick": "console.log('Explore Amsterdam')"
+                    }
+                }, {
+                    "mainTitle": "London",
+                    "secondaryTitle": "United Kingdom",
+                    "info": "fnsldf jkldalkjd dsajkljdl aj j jdksaj s klj djalsj dlkaj ljasl jdlkasj ldsjlj ldsja ldjsal",
+                    "imageUrl": "/imgs/London.jpg",
+                    "size": "medium",
+                    "button": {
+                        "label": "Explore More",
+                        "modifier": "outline",
+                        "onClick": "console.log('Explore London')"
+                    }
+                }]
 
             }
         }

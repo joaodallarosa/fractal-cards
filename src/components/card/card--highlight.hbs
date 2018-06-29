@@ -1,0 +1,14 @@
+<div class="card city elevation{{card.elevation}} corner-roundness{{card.corner-roundness}} height-{{card.size}}" style="background-image:url({{path card.imageUrl}}); margin: 10px;">
+    <div class="content">
+        <div class="countrycity-container">
+            <h3>{{card.secondaryTitle}}</h3>
+            <h1>{{card.mainTitle}}</h1>
+        </div>
+
+        {{#if card.info.length}}
+        <p>{{card.info}}</p>
+        {{/if}}
+        
+        {{> @button }}
+    </div>
+</div>
