@@ -27,6 +27,15 @@ $h-color: white;
     &.height-small {
         height: 360px;
     }
+    img {
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: auto;
+        overflow-x: hidden;
+    }
 }
 
 .card--small {}

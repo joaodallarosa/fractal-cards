@@ -1,4 +1,5 @@
-<div class="card city elevation{{card.elevation}} corner-roundness{{card.corner-roundness}} height-{{card.size}}" style="background-image:url({{path card.imageUrl}}); margin: 10px;">
+<div class="card city elevation{{card.elevation}} corner-roundness{{card.corner-roundness}} height-{{card.size}}" data-background-image-url="{{path card.imageUrl}}"
+    style=" margin: 10px;">
     <div class="content">
         <div class="countrycity-container">
             <h3>{{card.secondaryTitle}}</h3>
@@ -7,8 +8,70 @@
 
         {{#if card.info.length}}
         <p>{{card.info}}</p>
-        {{/if}}
-        
-        {{> @button }}
+        {{/if}} {{> @button }}
     </div>
 </div>
+
+{{!-- Lazy Loader for Background Images --}}
+<script>
+    function BackgroundNode({ node, loadedClassName }) {
+        let src = node.getAttribute('data-background-image-url');
+        let show = (onComplete) => {
+            requestAnimationFrame(() => {
+                node.style.backgroundImage = `url(${src})`
+                node.classList.add(loadedClassName);
+                onComplete();
+            })
+        }
+
+        return {
+            node,
+            // onComplete is called after the image is done loading.
+            load: (onComplete) => {
+                let img = new Image();
+                img.onload = show(onComplete);
+                img.src = src;
+            }
+        }
+    }
+
+    function BackgroundLazyLoader(
+        { selector, loadedClassName } = {
+            selector: '[data-background-image-url]',
+            loadedClassName: 'loaded'
+        }
+    ) {
+        let nodes = [].slice.apply(document.querySelectorAll(selector))
+            .map(node => new BackgroundNode({ node, loadedClassName }));
+
+        let callback = (entries, observer) => {
+            entries.forEach(({ target, isIntersecting }) => {
+                if (!isIntersecting) {
+                    return;
+                }
+
+                let obj = nodes.find(it => it.node.isSameNode(target));
+
+                if (obj) {
+                    obj.load(() => {
+                        // Unobserve the node:
+                        observer.unobserve(target);
+                        // Remove this node from our list:
+                        nodes = nodes.filter(n => !n.node.isSameNode(target));
+
+                        // If there are no remaining unloaded nodes,
+                        // disconnect the observer since we don't need it anymore.
+                        if (!nodes.length) {
+                            observer.disconnect();
+                        }
+                    });
+                }
+            })
+        };
+
+        let observer = new IntersectionObserver(callback);
+        nodes.forEach(node => observer.observe(node.node));
+    };
+
+    BackgroundLazyLoader();
+</script>
