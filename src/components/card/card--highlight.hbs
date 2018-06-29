@@ -1,9 +1,12 @@
-<div class="card city elevation{{card.elevation}} corner-roundness{{card.corner-roundness}} card--{{card.size}}" data-background-image-url="{{path card.imageUrl}}"
-    style=" margin: 10px;">
-    <div class="content">
-        <div class="countrycity-container">
+<div class="card elevation{{card.elevation}} corner-roundness{{card.corner-roundness}} card--{{card.size}}" data-background-image-url="{{path card.imageUrl}}" style="margin: 10px">
+    <div class="card__highlight-content">
+        <div class="card__highlight-main">
             <h3>{{card.secondaryTitle}}</h3>
+            {{#if card.logo}} 
+                <img class="card__logo" src="{{card.logo}}"> 
+            {{else}}
             <h1>{{card.mainTitle}}</h1>
+            {{/if}}
         </div>
 
         {{#if card.info.length}}

@@ -16,7 +16,7 @@
                 "card": {
                     "mainTitle": "Amsterdam",
                     "secondaryTitle": "Netherlands",
-                    "info": "fnsldf jkldalkjd dsajkljdl aj j jdksaj s klj djalsj dlkaj ljasl jdlkasj ldsjlj ldsja ldjsal",
+                    "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.",
                     "imageUrl": "/imgs/Amsterdam.jpg"
                 },
                 "button": {
@@ -32,7 +32,8 @@
                 "cards": [{
                     "mainTitle": "Valtech_",
                     "secondaryTitle": "Front-End",
-                    "info": "fnsldf jkldalkjd dsajkljdl aj j jdksaj s klj djalsj dlkaj ljasl jdlkasj ldsjlj ldsja ldjsal",
+                    "logo": "/imgs/valtech_logo.png",
+                    "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.",
                     "imageUrl": "/imgs/Lagoa.jpg",
                     "size": "big",
                     "button": {
@@ -43,7 +44,7 @@
                 }, {
                     "mainTitle": "Venice",
                     "secondaryTitle": "Italy",
-                    "info": "fnsldf jkldalkjd dsajkljdl aj j jdksaj s klj djalsj dlkaj ljasl jdlkasj ldsjlj ldsja ldjsal",
+                    "info": "Venice, the capital of northern Italy's Veneto region, is built on more than 100 small islands in a lagoon in the Adtriatic Sea. It has no roads, just canals.",
                     "imageUrl": "/imgs/Venice.jpg",
                     "size": "medium",
                     "button": {
@@ -54,7 +55,7 @@
                 }, {
                     "mainTitle": "Berlin",
                     "secondaryTitle": "Germany",
-                    "info": "fnsldf jkldalkjd dsajkljdl aj j jdksaj s klj djalsj dlkaj ljasl jdlkasj ldsjlj ldsja ldjsal",
+                    "info": "Berlin, the German capital, is renowned for its exceptional variety of attractions.",
                     "imageUrl": "/imgs/Berlin.jpg",
                     "size": "small",
                     "button": {
@@ -65,7 +66,7 @@
                 }, {
                     "mainTitle": "Barcelona",
                     "secondaryTitle": "Spain",
-                    "info": "fnsldf jkldalkjd dsajkljdl aj j jdksaj s klj djalsj dlkaj ljasl jdlkasj ldsjlj ldsja ldjsal",
+                    "info": "Barcelona, the capital of Catalonia, is a Mediterranean and cosmopolitan city with Roman remains.",
                     "imageUrl": "/imgs/Barcelona.jpg",
                     "size": "small",
                     "button": {
@@ -76,7 +77,7 @@
                 }, {
                     "mainTitle": "Paris",
                     "secondaryTitle": "France",
-                    "info": "fnsldf jkldalkjd dsajkljdl aj j jdksaj s klj djalsj dlkaj ljasl jdlkasj ldsjlj ldsja ldjsal",
+                    "info": "Paris occupies a central position in the rich agricultural region known as the Paris Basin.",
                     "imageUrl": "/imgs/Paris.jpg",
                     "size": "small",
                     "button": {
@@ -87,7 +88,7 @@
                 }, {
                     "mainTitle": "Amsterdam",
                     "secondaryTitle": "Netherlands",
-                    "info": "fnsldf jkldalkjd dsajkljdl aj j jdksaj s klj djalsj dlkaj ljasl jdlkasj ldsjlj ldsja ldjsal",
+                    "info": "Golden Age canals lined by tilting gabled buildings are the backdrop for Amsterdam's treasure-packed museums, vintage-filled shops and hyper-creative design.",
                     "imageUrl": "/imgs/Amsterdam.jpg",
                     "size": "small",
                     "button": {
@@ -98,7 +99,7 @@
                 }, {
                     "mainTitle": "London",
                     "secondaryTitle": "United Kingdom",
-                    "info": "fnsldf jkldalkjd dsajkljdl aj j jdksaj s klj djalsj dlkaj ljasl jdlkasj ldsjlj ldsja ldjsal",
+                    "info": "London is an enormous city. It is divided into thirty-two boroughs, although information on this page is divided between districts, inner boroughs and outer boroughs of the city.",
                     "imageUrl": "/imgs/London.jpg",
                     "size": "medium",
                     "button": {

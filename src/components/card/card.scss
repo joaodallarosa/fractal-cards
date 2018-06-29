@@ -1,21 +1,20 @@
 @import url(https://fonts.googleapis.com/css?family=OpenSans:300,400,500,700);
-// Variables
 $card-height-default: 280px;
 $text-color: white;
 .card {
     width: auto;
     height: $card-height-default;
     overflow: hidden;
-    margin: 20px;
+    margin: 10px;
     text-align: center;
-    background-size: auto;
-    transition: box-shadow .25s ease-in-out;
-    // If on mobile
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: box-shadow .25s ease-in-out; // If on mobile
     @media (max-width: 629px) {
         width: auto !important;
         height: 280px !important;
-    }
-    // Card sizes (only affects height)
+    } // Card sizes (only affects height)
     &.card--big {
         height: 520px;
     }
@@ -24,8 +23,7 @@ $text-color: white;
     }
     &.card--small {
         height: 360px;
-    }
-    // Card hover
+    } // Card hover
     &:hover {
         box-shadow: 3px 3px 20px rgba(0, 0, 0, .5);
     }
@@ -76,13 +74,13 @@ $text-color: white;
 }
 
 // Hightlight Card
-.city {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+.card__logo {
+    max-width: 200px;
+    width: auto;
+    margin-top: 5px;
 }
 
-.content {
+.card__highlight-content {
     font-family: 'Open Sans', sans-serif;
     color: $text-color;
     background-color: rgba(85, 85, 85, 0.4);
@@ -96,19 +94,13 @@ $text-color: white;
     transition: 0.6s ease-in-out;
     &:hover {
         background-color: rgba(85, 85, 85, 0.8);
-        .countrycity-container {
+        .card__highlight-main {
             top: 20%;
-            @media (max-width: 629px) {
-                top: 35%;
-            }
         }
         p {
             transition-delay: 0.2s;
             opacity: 1;
             top: 30%;
-            @media (max-width: 629px) {
-                top: 35%;
-            }
         }
         button {
             transition-delay: 0.4s;
@@ -132,7 +124,7 @@ $text-color: white;
         margin-left: auto;
         margin-right: auto;
     }
-    .countrycity-container {
+    .card__highlight-main {
         position: relative;
         top: 50%;
         transform: translateY(-50%);
