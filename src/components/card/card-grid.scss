@@ -1,0 +1,30 @@
+#grid-container {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    .card {
+        margin: 0px;
+    }
+    @media (max-width:629px) {
+        display: block;
+    }
+}
+
+@media (min-width:629px) {
+    .big {
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 100%;
+    }
+    .medium {
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 50%;
+    }
+    .small {
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 25%;
+        max-width: 25%;
+    }
+}

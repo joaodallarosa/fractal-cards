@@ -1,48 +1,35 @@
 @import url(https://fonts.googleapis.com/css?family=OpenSans:300,400,500,700);
-// variables
-// $card-width: 80%;
-$card-height: 280px;
-$h-color: white;
+// Variables
+$card-height-default: 280px;
+$text-color: white;
 .card {
     width: auto;
-    height: $card-height;
+    height: $card-height-default;
     overflow: hidden;
     margin: 20px;
-    text-align: center; // background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1765/bg-blog-card.jpg) no-repeat;
+    text-align: center;
     background-size: auto;
     transition: box-shadow .25s ease-in-out;
-    &:hover {
-        box-shadow: 3px 3px 20px rgba(0, 0, 0, .5);
-    }
-    @media (max-width:629px) {
+    // If on mobile
+    @media (max-width: 629px) {
         width: auto !important;
         height: 280px !important;
     }
-    &.height-big {
+    // Card sizes (only affects height)
+    &.card--big {
         height: 520px;
     }
-    &.height-medium {
+    &.card--medium {
         height: 360px;
     }
-    &.height-small {
+    &.card--small {
         height: 360px;
     }
-    img {
-        position: relative;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        width: auto;
-        overflow-x: hidden;
+    // Card hover
+    &:hover {
+        box-shadow: 3px 3px 20px rgba(0, 0, 0, .5);
     }
 }
-
-.card--small {}
-
-.card--medium {}
-
-.card--big {}
 
 .elevation0 {
     box-shadow: none;
@@ -62,38 +49,6 @@ $h-color: white;
 
 .elevation4 {
     box-shadow: 4px 4px 4px rgba(0, 0, 0, .5);
-}
-
-#grid-container {
-    display: flex;
-    flex-flow: row wrap;
-    font-weight: bold;
-    text-align: center;
-    .card {
-        margin: 0px;
-    }
-    @media (max-width:629px) {
-        display: block;
-    }
-}
-
-@media (min-width:629px) {
-    .big {
-        flex-grow: 0;
-        flex-shrink: 0;
-        flex-basis: 100%;
-    }
-    .medium {
-        flex-grow: 0;
-        flex-shrink: 0;
-        flex-basis: 50%;
-    }
-    .small {
-        flex-grow: 0;
-        flex-shrink: 0;
-        flex-basis: 25%;
-        max-width: 25%;
-    }
 }
 
 .corner-roundness {
@@ -120,7 +75,7 @@ $h-color: white;
     border-radius: 20px;
 }
 
-// Info Card
+// Hightlight Card
 .city {
     background-size: cover;
     background-repeat: no-repeat;
@@ -129,7 +84,7 @@ $h-color: white;
 
 .content {
     font-family: 'Open Sans', sans-serif;
-    color: $h-color;
+    color: $text-color;
     background-color: rgba(85, 85, 85, 0.4);
     top: 0;
     left: 0;
@@ -191,14 +146,14 @@ $h-color: white;
         font-weight: 300;
         letter-spacing: 2.33px;
         margin: 0px;
-        color: $h-color;
+        color: $text-color;
         text-transform: uppercase;
     }
     h1 {
         font-size: 28px;
         margin: 5px 0px 0px 0px;
         font-weight: bold;
-        color: $h-color;
+        color: $text-color;
         font-family: 'Open Sans', sans-serif;
         text-transform: uppercase;
     }
@@ -214,19 +169,5 @@ $h-color: white;
         -moz-transition: 0.4s ease-out;
         -ms-transition: 0.4s ease-out;
         transition: 0.4s ease-out;
-    }
-}
-
-// Animations 
-@keyframes info-hover {
-    0% {
-        opacity: 0;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-    100% {
-        opacity: 1;
-        top: 30%;
-        transform: translateY(-30%);
     }
 }
